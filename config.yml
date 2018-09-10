@@ -7,15 +7,15 @@
 # Mail Server #
 ###############
 
-# mail.backend: 'smtp'  # Use dummy if you want to disable email entirely
-# mail.host: 'localhost'
-# mail.port: 25
-# mail.username: ''
-# mail.password: ''
-# mail.use-tls: false
+mail.backend: 'smtp'  # Use dummy if you want to disable email entirely
+mail.host: 'smtp.gmail.com'
+mail.port: 587
+mail.username: 'service@example.com'
+mail.password: '123pass'
+mail.use-tls: true
 # The email address to send on behalf of
-# mail.from: 'root@localhost'
-
+mail.from: 'service@example.com'
+mail.list-namespace: 'example.com'
 # If you'd like to configure email replies, enable this.
 # mail.enable-replies: false
 
@@ -34,7 +34,8 @@
 # Changing this value will result in all current sessions being invalidated.
 # A new key can be generated with `$ sentry config generate-secret-key`
 # system.secret-key: 'changeme'
-
+system.admin-email: 'admin@example.com'
+system.url-prefix: 'https://sentry.example.com'
 # The ``redis.clusters`` setting is used, unsurprisingly, to configure Redis
 # clusters. These clusters can be then referred to by name when configuring
 # backends such as the cache, digests, or TSDB backend.
