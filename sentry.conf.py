@@ -1,6 +1,7 @@
 # This file is just Python, with a touch of Django which means
 # you can inherit and tweak settings to your hearts content.
-
+SENTRY_FEATURES['auth:register'] = True
+SENTRY_PUBLIC = True
 # For Docker, the following environment variables are supported:
 #  SENTRY_POSTGRES_HOST
 #  SENTRY_POSTGRES_PORT
