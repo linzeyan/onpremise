@@ -1,7 +1,6 @@
 # This file is just Python, with a touch of Django which means
 # you can inherit and tweak settings to your hearts content.
-SENTRY_FEATURES['auth:register'] = True
-SENTRY_PUBLIC = True
+
 # For Docker, the following environment variables are supported:
 #  SENTRY_POSTGRES_HOST
 #  SENTRY_POSTGRES_PORT
@@ -86,7 +85,8 @@ SENTRY_USE_BIG_INTS = True
 # Instruct Sentry that this install intends to be run by a single organization
 # and thus various UI optimizations should be enabled.
 SENTRY_SINGLE_ORGANIZATION = env('SENTRY_SINGLE_ORGANIZATION', True)
-
+###############
+SENTRY_PUBLIC = True
 #########
 # Redis #
 #########
@@ -169,6 +169,7 @@ if rabbitmq:
     )
 else:
     BROKER_URL = 'redis://:' + redis_password + '@' + redis + ':' + redis_port + '/' + redis_db
+
 
 
 ###############
