@@ -15,7 +15,7 @@ mail.password: '123pass'
 mail.use-tls: true
 # The email address to send on behalf of
 mail.from: 'service@example.com'
-mail.list-namespace: 'example.com'
+mail.list-namespace: 'sentry.example.com'
 # If you'd like to configure email replies, enable this.
 # mail.enable-replies: false
 
