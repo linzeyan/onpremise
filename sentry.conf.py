@@ -252,6 +252,8 @@ SENTRY_WEB_HOST = '0.0.0.0'
 SENTRY_WEB_PORT = 9000
 SENTRY_WEB_OPTIONS = {
     # 'workers': 3,  # the number of web workers
+    'workers': 3,
+    'buffer-size': 32768,
 }
 
 ###############
@@ -286,6 +288,7 @@ else:
 if SENTRY_OPTIONS['mail.enable-replies']:
     SENTRY_OPTIONS['mail.reply-hostname'] = env('SENTRY_SMTP_HOSTNAME') or ''
 
+SENTRY_SMTP_PORT = 587
 # If this value ever becomes compromised, it's important to regenerate your
 # SENTRY_SECRET_KEY. Changing this value will result in all current sessions
 # being invalidated.
