@@ -53,9 +53,9 @@ system.url-prefix: 'https://sentry.example.com'
 # Uploaded media uses these `filestore` settings. The available
 # backends are either `filesystem` or `s3`.
 
-# filestore.backend: 'filesystem'
-# filestore.options:
-#   location: '/tmp/sentry-files'
+filestore.backend: 'filesystem'
+filestore.options:
+  location: '/tmp/sentry-files'
 
 # filestore.backend: 's3'
 # filestore.options:
