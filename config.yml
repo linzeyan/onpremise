@@ -52,7 +52,7 @@ system.url-prefix: 'https://sentry.example.com'
 
 # Uploaded media uses these `filestore` settings. The available
 # backends are either `filesystem` or `s3`.
-
+# This directory is in the web container, need write permission.
 filestore.backend: 'filesystem'
 filestore.options:
   location: '/tmp/sentry-files'
